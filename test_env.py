@@ -53,10 +53,11 @@ def main():
         # ac = [env.action_space.sample() for _ in range(nb_agents)]
 
         # test crying action response
-        ac = random.choices([0,1,2,3])
+        ac = random.choices([0,1,2,3,4,5])
         print("ac", ac)
 
-        obs, _, done, _ = env.step(ac)
+        obs, reward, done, _ = env.step(ac)
+        print("REWARD:", reward)
 
         if done:
             break
